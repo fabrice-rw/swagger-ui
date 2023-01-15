@@ -34,10 +34,10 @@ const options = {
 		],
 		servers:[
 			{
-				url: "http://localhost:5000"
+				//url: "http://localhost:5000"
 			},
 			{
-				//url: "https://important-red-beanie.cyclic.app" 
+				url: "https://swagger-ui-production.up.railway.app/"
 			}
 		],
 	},
