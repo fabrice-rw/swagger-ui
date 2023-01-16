@@ -34,9 +34,6 @@ const options = {
 		],
 		servers:[
 			{
-				//url: "http://localhost:5000"
-			},
-			{
 				url: "https://swagger-ui-production.up.railway.app/api-docs"
 			}
 		],
