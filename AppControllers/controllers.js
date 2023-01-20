@@ -148,7 +148,7 @@ module.exports.home = async (req, res) => {
 module.exports.Userlogin_post = async (req, res) => {
     const { email, password } = req.body
 
-    //console.log(email, password )
+    console.log(email, password )
 
     try {
         const user = await UserSchema.login(email, password)
@@ -156,7 +156,7 @@ module.exports.Userlogin_post = async (req, res) => {
         const token = createUserToken(user._id)
         res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 })
 
-        return res.status(200).json({ "statusCode": 200, "message": 'user log in succesful', "jwt": token })
+        return res.status(200).json({ "statusCode": 200, "message": 'user log in succesful', "jwt": token, "userID": user._id })
     }
     catch (err) {
         const errors = handleErrors(err)
