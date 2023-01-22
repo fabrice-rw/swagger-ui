@@ -170,7 +170,6 @@ const { requireAuth, checkUser } = require('../middlerware/middleware');
  *      example: 
  *          fullname: Fabrice N.
  *          email: fabricen@gmail.com
- *          phoneNumber: 0788513004
  *          UserMessage: Hi, I like your blogs!
  */
 
