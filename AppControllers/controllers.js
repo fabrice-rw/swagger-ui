@@ -567,10 +567,10 @@ module.exports.deleteAllLikes = async (req, res) => {
 // Send message
 module.exports.saveMessage = async (req, res) => {
     
-    const { fullname, email, UserMessage } = req.body
+    const { fullname, email, phoneNumber, UserMessage } = req.body
 
     try {
-        const message = await Message.create({ fullname, email, UserMessage })
+        const message = await Message.create({ fullname, email, phoneNumber, UserMessage })
         return res.status(200).json({ 'statusCode': 200, 'message': 'Message sent', 'data': (await Message.find())})
     } catch (error) {
         console.log(error)
