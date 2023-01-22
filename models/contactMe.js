@@ -14,10 +14,6 @@ const contactMe = mongoose.Schema({
         lowercase: true,
         validate: [isEmail, 'Please enter a valid email']
     },
-    phoneNumber: {
-        type: String,
-        require: [true, 'Please enter your phone number']
-    },
     UserMessage: {
         type: String,
         required: [true, 'Please enter the message'],
