@@ -164,12 +164,16 @@ const { requireAuth, checkUser } = require('../middlerware/middleware');
  *          email:
  *              type: string
  *              description: User email
+ *          phoneNumber:
+ *              type: string
+ *              description: User Phone Number
  *          UserMessage: 
  *              type: string
  *              description: message from user to admin
  *      example: 
  *          fullname: Fabrice N.
  *          email: fabricen@gmail.com
+ *          phoneNumber: 0788513004
  *          UserMessage: Hi, I like your blogs!
  */
 
