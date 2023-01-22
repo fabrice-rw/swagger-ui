@@ -178,7 +178,7 @@ module.exports.Adminlogin_post = async (req, res) => {
         res.jwt = token
 
         //console.log(res.jwt)
-        return res.status(200).json({ "statusCode": 200, "message": 'Admin log in succesful', 'jwt': token })
+        return res.status(200).json({ "statusCode": 200, "message": 'Admin log in succesful', 'jwt': token, "adminID": admin._id })
     }
     catch (err) {
         const errors = handleErrors(err)
@@ -195,7 +195,7 @@ module.exports.Adminlogin_post = async (req, res) => {
 module.exports.Userlogout_get = (req, res) => {
     res.cookie('jwt', '', { maxAge: 2000 })
     res.status(200).json({ "statusCode": 200, "message": "You are logged out successfully", "data": ["Home page"] })
-    //res.redirect('/')
+    res.redirect('/')
 }
 
 // Get all user 

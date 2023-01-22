@@ -703,7 +703,7 @@ router.delete('/allLikes', requireAuth, controllers.deleteAllLikes);
  *          description: Please log in
  */
 // Sent message to admim
-router.post('/sendMessage', checkUser, controllers.saveMessage);
+router.post('/sendMessage', controllers.saveMessage);
 /**
  * @swagger
  * /allMessages:
