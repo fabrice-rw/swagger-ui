@@ -442,7 +442,7 @@ router.get("/blog/:id", requireAuth, controllers.getOneBlog);
  *         description: Created successfully
  */
 //Create a blog
-router.post("/createBlog", controllers.createBlog);
+router.post("/createBlog", requireAuth, controllers.createBlog);
 
 /**
  * @swagger
