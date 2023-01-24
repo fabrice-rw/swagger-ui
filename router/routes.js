@@ -396,7 +396,7 @@ router.delete('/deleteAllUser', requireAuth, controllers.deleteAllUser);
  */
 
 // Get all blogs
-router.get("/allBlogs", requireAuth, controllers.allBlogs);
+router.get("/allBlogs", controllers.allBlogs);
 
 /**
  * @swagger
